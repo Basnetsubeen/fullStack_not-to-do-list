@@ -1,0 +1,36 @@
+### root api
+GET http://localhost:8000/
+
+# CRUD
+
+### fetch all task 
+GET http://localhost:8000/api/v1/task/
+
+
+###  add new task
+POST http://localhost:8000/api/v1/task
+Content-Type: application/json
+
+{
+    "task" : "runnig",
+    "hr": 100
+}
+
+###  update or switch  task
+PATCH http://localhost:8000/api/v1/task/
+Content-Type: application/json
+
+{
+    "_id": "62ce0b20ef689f279fc7a1af",
+    "type": "bad",
+}
+
+
+
+###  deleted the tasks
+DELETE http://localhost:8000/api/v1/task/
+Content-Type: application/json
+
+{
+    "ids" : ["62ce45662cde075391760875"]
+}
