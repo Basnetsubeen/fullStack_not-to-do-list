@@ -19,7 +19,7 @@ app.use("/api/v1/task", taskRouter);
 
 // static content server
 const __dirname = path.resolve();
-app.use(express.static(path.join(__dirname, "/frontend/build")));
+app.use(express.static(path.join(__dirname, "/client/build")));
 
 app.use("/", (req, res) => {
   res.sendFile(path.join(__dirname, "/client/build/index.html"));
